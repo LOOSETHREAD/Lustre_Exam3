@@ -5,18 +5,15 @@
  */
 package lustre_exam_3;
 
-import java.util.Scanner;
-
 /**
  *
  * @author User
  */
-public class Lustre_Exam_3 {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
-    private class printPriorityQueue{
+
+public class Lustre_Exam_3 {
+private class printPriorityQueue{
             
             int priority;
             int data;
@@ -27,8 +24,8 @@ public class Lustre_Exam_3 {
 
     private printPriorityQueue front = null;
    static int printCount = 0;
-    private void printAdd(int item, int priority, int num){
-        printPriorityQueue node = new printPriorityQueue();
+   private void printAdd(int item, int priority, int num){
+            printPriorityQueue node = new printPriorityQueue();
             node.data=item;
             node.priority = priority;
             node.next = null;
@@ -51,36 +48,36 @@ public class Lustre_Exam_3 {
                }
             
         }
-    public int printDelete(){
-        
+    public int printDelete() {
+          
           int temporary = front.data;
           front = front.next;
             
            return temporary; 
-           
         
         }
-    public void printDisplay(){
-        
+    
+     
+        public void printDisplay() {
+           
             printPriorityQueue temporary = front;
             
             System.out.println("Student \t\t Priority \t\t Pages");
             
             while(temporary != null){
               
-                   System.out.println(temporary.num + "\t\t\t " +temporary.priority + "\t\t\t " + temporary.data);
+                   System.out.println(temporary.num + "\t\t\t " + temporary.priority + "\t\t\t " + temporary.data);
                 temporary = temporary.next;
 
             }
             System.out.println("\n");
         }
-    public static void main(String[] args)  {
-        // TODO code application logic here
+    public static void main(String[] args){
         Lustre_Exam_3 queue = new Lustre_Exam_3();
         Scanner scn = new Scanner(System.in);
-        boolean input = true;
-        while (input) {            
-            System.out.println("Enter Number of Student (e.g, 0-5)");
+        boolean True = true;
+        while (True) {            
+            System.out.println("Enter Number of Student (e.g, 0-5): ");
             int num = scn.nextInt();
             System.out.println("Enter Pages: ");
                     int item = scn.nextInt();
@@ -89,7 +86,7 @@ public class Lustre_Exam_3 {
                       
                     queue.printAdd(item, priority, num);
                      if(printCount>4){
-                         System.out.println("Already full, Highest Priority will be removed.");
+                         System.out.println("Already full, highest priority will be deleted.");
                          queue.printDelete();
                      }
                         
