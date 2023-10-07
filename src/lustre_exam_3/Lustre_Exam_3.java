@@ -55,9 +55,7 @@ public class Lustre_Exam_3 {
         
           int temporary = front.data;
           front = front.next;
-          
             
-          
            return temporary; 
            
         
@@ -80,21 +78,19 @@ public class Lustre_Exam_3 {
         // TODO code application logic here
         Lustre_Exam_3 queue = new Lustre_Exam_3();
         Scanner scn = new Scanner(System.in);
-        boolean True = true;
-        while (True) {            
+        boolean input = true;
+        while (input) {            
             System.out.println("Enter Number of Student (e.g, 0-5)");
             int num = scn.nextInt();
             System.out.println("Enter Pages: ");
                     int item = scn.nextInt();
                     System.out.println("Enter Priority: ");
                     int priority = scn.nextInt();
-                    
                       
                     queue.printAdd(item, priority, num);
                      if(printCount>4){
-                         queue.printDelete();
                          System.out.println("Already full, Highest Priority will be removed.");
-                      
+                         queue.printDelete();
                      }
                         
                     
